@@ -50,6 +50,12 @@
 	nav	{
 		z-index: 10;
 		position: relative;
+		height: 65px;
+		margin: 0 auto;
+		width: 55vw;
+		text-align: center;
+		background: rgba(0,0,0,1);
+		
 		}
 
 		nav ul li a{
@@ -101,7 +107,7 @@
 
 	/*Início do Conteúdo*/
 section {
-	height: 100vh;
+	height: 80vh;
 	clear:  both; /* cancela o float [left right both] */
 }
 
@@ -380,6 +386,11 @@ section p {
 		animation: banner04 10s linear infinite;
 	}
 
+	section {
+		height: 75vh;
+		clear:  both; /* cancela o float [left right both] */
+	}
+
 	@keyframes banner01 {
 		0% { left: 0; opacity: 1;/*visivel*/}
 		25% {left: -500px; opacity: 1;/* saiu da tela*/ }
@@ -414,6 +425,18 @@ section p {
 
 	@media screen and (max-width: 768px){
 	/*Resolução para tablet na vertical*/
+	header{
+		height: 50vh;
+	}
+
+	nav	{
+		height: 50px;
+		margin: 0 auto;
+		width: 80vw;
+		text-align: center;
+		background: rgba(0,0,0,1);
+	}
+
 	nav ul li a{
 		padding: 10px 10px  25px 30px;
 		margin:0px 5px 0px 5px;
@@ -459,6 +482,22 @@ h1	{
 		top: 40%;
 		left: 10%;
 	}
+
+	section {
+		height: 75vh;
+		clear:  both; /* cancela o float [left right both] */
+	}
+	
+	section#quem_somos figure {
+			width: 400px;
+			height: 200px;
+			margin: 50px auto;
+			border-radius: 300px ;
+			overflow: hidden;/* excesso de conteúdo no elemento [scroll hidden inherit] */
+			box-shadow: 0 0 30px rgba(0,0,0,0.8);/* sombra ao redor do elemento [ dist_x dist_y desfoque cor ] */
+	}
+
+	
 
 	}
 
