@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Desenvolvimento Web, Front-End e layout</title>
+
+		<meta charset="utf-8" >
+		<!-- favicon -->
+		<link rel="icon" href="imagens/favicon.png">
+		<!-- A linha abaixo "garante" o layout responsivo nos diversos dispositivos mobile -->
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+		<link media="all" rel="stylesheet" type="text/css" href="css/estilo.css">
+		<!--Uso da biblioteca Jquery do google-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<header id="home">
+			<h1></h1>		
+		</header>
+
+		<!--Início do Menu-->
+		<nav class="Menu"><!-- Classe usada para fixar menu no JS-->
+			<!--A linha abaixo cria o menu hamburgue > &#9776 = (Três linhas horizontais)-->
+			<a href="#" class="Mobile">&#9776 Menu</a>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#quem_somos">Quem somos</a></li>
+				<li><a href="#portifolio">Portifolio</a></li>			
+				<li><a href="#clientes">Cliente</a></li>
+				<li><a href="#contatos">Contatos</a></li>
+				
+			</ul>
+		</nav>
+		<!--Fim do Menu-->
+		<!--Início do Conteúdo-->
+		<main >
+			<section id="quem_somos">
+
+				<figure> 
+					<img src="imagens/design03.png" alt="Retrato do dono do site" >
+				</figure>
+
+				<p>Sou <strong>Leandro,</strong> aluno do SENAC, do curso Tecnico em Informática. Este site é um mini projeto com os links do <a href="https://github.com/Leandrosales993/Mini-Projeto" target="_blank">GitHub</a> e do <a href="https://br.000webhost.com/" target="_blank">000webhost</a> 
+					e o pdf do <a href="NinjaMock/DSite.pdf" target="_blank">NinjaMock</a></p>
+				<p>A<strong>DSites,</strong> é uma empresa de Desenvolvimento Web e Front-End.<em>Tem vasta experiência em soluções para web e marketing digital.</em></p> <p>Já desenvolveu e prestou consultoria para empresas, agências e parceiros.
+				</p>
+
+				<p>
+				A<b>DSites,</b> atende grandes agências onde realiza trabalhos <i>como desenvolvedor front-end, e back-end</i> <i>programação javascript</i> e <i>SEO</i>.
+				</p>
+
+				<p> <a href="#portifolio" >Clique aqui e conheça meus trabalhos. </a> </p>
+
+			</section>
+			<section id="portifolio">
+
+				<figure >
+					<img src="imagens/1.jpg" alt="Trabalho 01" />
+					<figcaption> <b>Trabalho 01</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/2.jpg" alt="Trabalho 02" />
+					<figcaption> <b>Trabalho 02</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/3.jpg" alt="Trabalho 03" />
+					<figcaption> <b>Trabalho 03</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/4.jpg" alt="Trabalho 04" />
+					<figcaption> <b>Trabalho 04</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/5.jpg" alt="Trabalho 05" />
+					<figcaption> <b>Trabalho 05</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/6.jpg" alt="Trabalho 06" />
+					<figcaption> <b>Trabalho 06</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/7.jpg" alt="Trabalho 07" />
+					<figcaption> <b>Trabalho 07</b> </figcaption>
+				</figure>
+
+				<figure >
+					<img src="imagens/8.jpg" alt="Trabalho 08" />
+					<figcaption> <b>Trabalho 08</b> </figcaption>
+				</figure>
+
+			</section>
+
+			<section id="clientes">
+				<aside>
+					<figure>
+						<img src="imagens/logo01.png" alt="logo01" >
+						<img src="imagens/logo02.jpg" alt="logo02" >
+						<img src="imagens/logo03.jpg" alt="logo03" >
+						<img src="imagens/logo04.png" alt="logo04" >
+					</figure>
+				</aside>
+
+			</section>
+
+			<section id="contatos">
+			<h2>Contato</h2>
+					<form action="formulario.php" method="POST">
+						<input type="text" name="nome" placeholder="nome">
+						<input type="text" name="email" placeholder="email">
+						<textarea name="mensagem" placeholder="mensagem"></textarea>
+						<input type="submit" value="Enviar">
+					</form>	
+		
+			</section>
+
+		</main>
+		<!--Fim do Conteúdo-->
+		<!--Início do Rodapé-->
+		<footer>
+			<p>©2018 - Leandro</p>
+			<a href="https://pt-br.facebook.com/" target="_blank"><img id="facebook" src="imagens/facebook.png" alt="Facebook"></a>
+			<a href="https://plus.google.com/discover" target="_blank"><img id="google" src="imagens/googleplus.png" alt="Google Plus"></a>
+			<a href="https://www.linkedin.com/" target="_blank"><img id="linkedin" src="imagens/linkedin.png" alt="Linkedin"></a>
+			<a href="https://twitter.com/" target="_blank"><img id="twitter" src="imagens/twitter.png" alt="Twitter"></a>
+		</footer>
+		<!--Fim do Rodapé-->
+
+	<script src="scripts/tela.js"></script>
+	<script src="scripts/fixamenu.js"></script>
+	<script src="scripts/menuresponsivo.js"></script>
+	</body>
+</html>

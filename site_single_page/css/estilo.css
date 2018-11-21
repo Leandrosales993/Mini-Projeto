@@ -1,0 +1,578 @@
+/* Folha de estilo principal do DSite
+ * @author Leandro
+*/
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext);
+
+	* {/* Regra de Reset */
+		margin: 0;
+		padding: 0;
+		font-size: 18px;/* tamanho da fonte */
+		font-family: 'Josefin Sans', sans-serif; /* muda o tipo de fonte [arial tahoma verdana courier sans "Times New Roman"] */
+		line-height: 150%;/* entrelinhas do texto */
+		color: #333333;/* cor do texto */
+		text-align: justify;/* alinhamento do texto [ left right center justify] */
+	}
+
+	html, body {
+		height: 100%;
+	}
+
+	header {
+	background-color: #cccccc;
+	height: 80vh;
+	background-image: url(../imagens/PlanodeFundo.png);/* colocar imagem de fundo no elemento*/
+	background-size: cover; /* controlar o tamanho da imagem de fundo x y [px % auto cover] */
+	background-position: center center ; /* posiciona o background x[left center right] y[top center bottom ] [px % ] */
+	background-repeat: no-repeat; /* controla a repetição [no-repeat repeat-x repeat-y repeat] */
+	background-attachment: fixed;/* controla o comportamento durante a rolagem [scroll fixed inherit] */
+	position: relative;
+	}
+	/*Logotipo*/ 
+	h1	{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -7.5vw;
+	margin-top: -7.5vw;  
+	background: #ffffff;
+	background-image: url(../imagens/logotipo1.png);
+	background-position: 45% 50%;	
+	width: 15vw;
+	height: 15vw;
+	line-height: 7vw;
+	border-radius: 10vw;
+	border: dashed 2px #333333;
+	padding: 20px;
+	}
+	/*Fim do css Logotipo*/
+
+	/*Menu*/
+	nav	{
+		z-index: 10;
+		position: relative;
+		}
+
+		nav ul li a{
+			padding: 15px 30px  20px 30px;
+			margin:0px 15px 0px 15px;
+			color: #ffffff;
+			text-decoration: none; /* underline overline line-through none */
+			display: block; /* controla a exibição no navegador [bloco ou inline] [block inline inline-block] */
+	
+		}
+	
+	nav ul{
+		/*removendo o estilo da lista*/
+		list-style: none;
+		background: rgba(0,0,0,1);
+		padding: 0px;
+		margin: 0px;
+		overflow: hidden;
+
+	}
+
+	nav > ul > li{
+		float: left;
+	}
+
+	nav ul li a:hover{ /* pseudo-elemento de link com o mouse sobre */
+		border-bottom: solid 1px #ffffff;
+		background: linear-gradient(#333333 30% , transparent 80%);
+	}
+
+	
+	nav li ul{
+		display: none;
+	}
+
+	.Mobile{
+		display: none;
+	}
+
+	/* Classe usada pelo JS para fixar o menu */
+	.Fixar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	
+}
+	/*Fim do Menu*/
+
+	/*Início do Conteúdo*/
+section {
+	height: 100vh;
+	clear:  both; /* cancela o float [left right both] */
+}
+
+section#quem_somos figure {
+		width: 500px;
+		height: 250px;
+		margin: 50px auto;
+		border-radius: 300px ;
+		overflow: hidden;/* excesso de conteúdo no elemento [scroll hidden inherit] */
+		box-shadow: 0 0 30px rgba(0,0,0,0.8);/* sombra ao redor do elemento [ dist_x dist_y desfoque cor ] */
+}
+
+figure img {
+		width: 100%;
+}
+
+section#portifolio {
+		padding-left: 10%;
+	}
+
+	section#portifolio figure {
+		width: 30%;
+		margin: 3px;
+		float: left; /* flutuação do elemento [left right inherit] */
+		position: relative;
+		overflow: hidden;
+	}
+
+	section#portifolio  figure figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(255,255,255,0.7);
+		width: 100%;
+		height: 100%;
+		font-weight: bold;/* negrito da fonte [normal bold 200]*/
+		font-style: italic;/* coloca o texto em itálico [italic inherit normal] */
+		transition: all .5s ease-in-out;
+	}
+
+	section#portifolio figure figcaption b {
+		font-size: 30px!important;
+		position: absolute;
+		top: 40%;
+		left: 20%;
+	}
+
+	section#portifolio figure:hover figcaption {
+		opacity: 0;/* opacidade do elemento [0-1] */
+		transition: opacity 1s ease-in-out; /* transição entre valores que são alterados por essa regra [atributo tempo tipo]*/
+		top: 302px;
+		transition: all 2s ease-in-out;/* transição entre valores que são alterados por essa regra [atributo tempo tipo] */
+	}
+
+section p {
+		width: 80%;
+		margin: 20px auto;
+	}
+
+	/* banner animado com CSS*/
+	section#clientes {
+		padding-top: 200px!important;
+	}
+
+	section#clientes aside {
+		width: 1000px;
+		height: 400px;
+		margin: 0px auto!important;
+		overflow: hidden;
+		clear: both;
+		position: relative;
+		/*transition: all 0.5s ease-in-out;*/
+	}
+	/******Fim do banner animado******/
+	section#clientes aside figure img:nth-child(1) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: banner01 10s linear infinite;/* serve para aplicar a animação criada com o @keyframes [ nome tempo tipo repetição] */
+	}
+
+	section#clientes aside figure img:nth-child(2) {
+		position: absolute;
+		top: 0;
+		left: 1000px;
+		animation: banner02 10s linear infinite;
+	}
+
+	section#clientes aside figure img:nth-child(3) {
+		position: absolute;
+		top: 0;
+		left: 2000px;
+		animation: banner03 10s linear infinite;
+	}
+
+	section#clientes aside figure img:nth-child(4) {
+		position: absolute;
+		top: 0;
+		left: 3000px;
+		animation: banner04 10s linear infinite;
+	}
+	/*Fim do Conteúdo*/
+
+	/*Início do @keyframes*/
+	@keyframes banner01 {
+		0% { left: 0; opacity: 1;/*visivel*/}
+		25% {left: -1000px; opacity: 1;/* saiu da tela*/ }
+		50% { left: -1000px; opacity: 0;}
+		75% { left: 1000px; opacity: 1;}
+		100% { left: 0px; opacity: 1;}
+		
+	}
+
+	@keyframes banner02 {
+		0% { left: 1000px; opacity: 1;}
+		25% { left: 0; opacity: 1;}
+		50% { left: -1000px; opacity: 1;}
+		75% { left: -1000px; opacity: 0;}
+		100% { left: -1000px; opacity: 0;}
+		
+	}
+
+	@keyframes banner03 {
+		0% { left: 1000px; opacity: 1;}
+		25% { left: 1000px; opacity: 1;}
+		50% { left: 0px; opacity: 1;}
+		75% { left: -1000px; opacity: 1;}
+		100% { left: -1000px; opacity: 0;}
+	}
+
+	@keyframes banner04 {
+		50% { left: 1000px; opacity: 1;}
+		75% { left: 0px; opacity: 1;}
+		100% { left: -1000px; opacity: 1;}
+		
+	}
+	/*Fim do @keyframes*/
+	/*section#clientes aside:hover {
+		height: 300px;
+		opacity: 1;
+		transition: all 0.5s ease-in-out;
+	}*/
+
+	/*Formulario de Contato*/
+	section#contatos{
+		padding-top: 100px!important;
+	}
+
+	section h2{
+		text-align: center;
+		font-size: 50px;
+	}
+
+	#contatos{
+		padding-top: 80px;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	#contatos input[type=text]{
+		width: 100%;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #000000;
+		margin-bottom: 20px;
+	}
+
+	#contatos textarea{
+		width: 100%;
+		padding: 20px 10px 40px 10px;
+		border-radius: 5px;
+		border: 1px solid #000000;
+		margin-bottom: 20px;
+		resize: none;
+	}
+
+	#contatos input[type=submit]{
+		background-color: #000000;
+		border-radius: 5px;
+		border: 1px solid #000000;
+		padding: 10px 25px 10px 25px;
+		color: #ffffff; 
+	}
+	/*Fim do formulario de Contato*/
+
+	/*Início do Rodapé*/
+	footer{
+		width: 100%;
+		margin-top: 50px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background: rgba(0,0,0,1);
+	}
+
+	footer p{
+		color: #ffffff;
+	}
+	/*Fim do Rodapé*/
+		/*Início da Responsividade*/
+	@media screen and (max-width: 1024px){
+		/*Resolução para tablet na horizontal*/
+		header{
+			height: 50vh;
+		}
+
+		nav	{
+			height: 65px;
+			margin: 0 auto;
+			width: 80vw;
+			text-align: center;
+			background: rgba(0,0,0,1);
+		}
+
+		h1	{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -7.5vw;
+			margin-top: -7.5vw;  
+			background: #ffffff;
+			background-image: url(../imagens/logotipo1.png);
+			background-position: 45% 50%;	
+			width: 15vw;
+			height: 15vw;
+			line-height: 7vw;
+			border-radius: 10vw;
+			border: dashed 2px #333333;
+			padding: 20px;
+			}
+
+			section#portifolio{
+				padding-top: 0;
+			}
+		
+
+		/* banner animado  com CSS*/
+		section#clientes {
+		padding-top: 30px;
+		}
+
+		section#clientes aside {
+		width: 500px;
+		height: 200px;
+		margin: 0px auto!important;
+		overflow: hidden;
+		clear: both;
+		position: relative;
+		/*transition: all 0.5s ease-in-out;*/
+		}
+
+		section#clientes aside figure img:nth-child(1) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: banner01 10s linear infinite;/* serve para aplicar a animação criada com o @keyframes [ nome tempo tipo repetição] */
+	}
+
+	section#clientes aside figure img:nth-child(2) {
+		position: absolute;
+		top: 0;
+		left: 1000px;
+		animation: banner02 10s linear infinite;
+	}
+
+	section#clientes aside figure img:nth-child(3) {
+		position: absolute;
+		top: 0;
+		left: 2000px;
+		animation: banner03 10s linear infinite;
+	}
+
+	section#clientes aside figure img:nth-child(4) {
+		position: absolute;
+		top: 0;
+		left: 3000px;
+		animation: banner04 10s linear infinite;
+	}
+
+	@keyframes banner01 {
+		0% { left: 0; opacity: 1;/*visivel*/}
+		25% {left: -500px; opacity: 1;/* saiu da tela*/ }
+		50% { left: -500px; opacity: 0;}
+		75% { left: 500px; opacity: 1;}
+		100% { left: 0px; opacity: 1;}
+	}
+
+	@keyframes banner02 {
+		0% { left: 500px; opacity: 1;}
+		25% { left: 0; opacity: 1;}
+		50% { left: -500px; opacity: 1;}
+		75% { left: -500px; opacity: 0;}
+		100% { left: -500px; opacity: 0;}
+	}
+
+	@keyframes banner03 {
+		0% { left: 500px; opacity: 1;}
+		25% { left: 500px; opacity: 1;}
+		50% { left: 0px; opacity: 1;}
+		75% { left: -500px; opacity: 1;}
+		100% { left: -500px; opacity: 0;}
+	}
+
+	@keyframes banner04 {
+		50% { left: 500px; opacity: 1;}
+		75% { left: 0px; opacity: 1;}
+		100% { left: -500px; opacity: 1;}
+	}
+
+	}
+
+	@media screen and (max-width: 768px){
+	/*Resolução para tablet na vertical*/
+	nav ul li a{
+		padding: 10px 10px  25px 30px;
+		margin:0px 5px 0px 5px;
+		color: #ffffff;
+		text-decoration: none; /* underline overline line-through none */
+		display: block; /* controla a exibição no navegador [bloco ou inline] [block inline inline-block] */
+	}
+
+nav ul{
+	/*removendo o estilo da lista*/
+	list-style: none;
+	background: rgba(0,0,0,1);
+	padding: 0;
+	margin: 0;
+}
+
+h1	{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -7.5vw;
+	margin-top: -7.5vw;  
+	background: #ffffff;
+	background-image: url(../imagens/logotipo1.png);
+	background-repeat: no-repeat;
+	background-size: 300%;
+	background-position: 45% 50%;	
+	width: 15vw;
+	height: 15vw;
+	line-height: 7vw;
+	border-radius: 15vw;
+	border: dashed 2px #333333;
+	padding: 20px;
+	}
+
+	section#portifolio{
+		padding-top: 10%;
+	}
+
+	section#portifolio figure figcaption b {
+		font-size: 30px!important;
+		position: absolute;
+		top: 40%;
+		left: 10%;
+	}
+
+	}
+
+	@media screen and (max-width: 480px){
+	/*Resolução para celular na vertical*/
+		.Mobile{
+			display: block;
+			background: rgba(0,0,0,1);
+			color: #ffffff;
+			padding: 20px;
+			text-decoration: none;
+		}
+		
+		nav > ul > li{
+			float: none;
+		}
+
+		nav ul{
+			display: none;
+		}
+
+		h1	{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -7.5vw;
+			margin-top: -7.5vw;  
+			background: #ffffff;
+			background-image: url(../imagens/logotipo1.png);
+			background-repeat: no-repeat;
+			background-size: 300%;
+			background-position: 45% 50%;	
+			width: 20vw;
+			height: 20vw;
+			line-height: 7vw;
+			border-radius: 15vw;
+			border: dashed 2px #333333;
+			padding: 20px;
+			}
+
+			section {
+				height: 100%;
+				clear:  both; /* cancela o float [left right both] */
+			}
+
+			section#quem_somos figure {
+				width: 400px;
+				height: 210px;
+				margin: 50px auto;
+				border-radius: 400px;
+				overflow: hidden;/* excesso de conteúdo no elemento [scroll hidden inherit] */
+				box-shadow: 0 0 30px rgba(0,0,0,0.8);/* sombra ao redor do elemento [ dist_x dist_y desfoque cor ] */
+		}
+
+		section#quem_somos figure img{
+			padding: 3% 1%;
+		}
+
+		section#portifolio {
+			padding-top: 10%;
+		}
+	
+		section#portifolio figure {
+			width: 60%;
+			margin: 3px;
+			float: inherit; /* flutuação do elemento [left right inherit] */
+			position: relative;
+			overflow: hidden;
+		}
+
+		section#clientes aside {
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+			clear: both;
+			/*transition: all 0.5s ease-in-out;*/
+		}
+
+		/************ Frames *****************/
+	@keyframes banner01 {
+		0% { left: 0; opacity: 1;/*visivel*/}
+		25% {left: -400px; opacity: 1;/* saiu da tela*/ }
+		50% { left: -400px; opacity: 0;}
+		75% { left: 400px; opacity: 1;}
+		100% { left: 0px; opacity: 1;}
+	}
+
+	@keyframes banner02 {
+		0% { left: 400px; opacity: 1;}
+		25% { left: 0; opacity: 1;}
+		50% { left: -400px; opacity: 1;}
+		75% { left: -400px; opacity: 0;}
+		100% { left: -400px; opacity: 0;}
+	}
+
+	@keyframes banner03 {
+		0% { left: 400px; opacity: 1;}
+		25% { left:400px; opacity: 1;}
+		50% { left: 0px; opacity: 1;}
+		75% { left: -400px; opacity: 1;}
+		100% { left: -400px; opacity: 0;}
+	}
+
+	@keyframes banner04 {
+		50% { left: 400px; opacity: 1;}
+		75% { left: 0px; opacity: 1;}
+		100% { left: -400px; opacity: 1;}
+	}
+	
+	section#contatos{
+		padding-bottom: 30%;
+	}
+
+	}
+
+	
+	
